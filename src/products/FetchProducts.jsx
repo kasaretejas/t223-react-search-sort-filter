@@ -1,4 +1,5 @@
-import React, { use, useEffect, useState } from 'react'
+//import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react' //here removed use
 import DisplayProduct from './DisplayProduct'
 import useFetch from '../customHooks/useFetch'
 import FilterProducts from './FilterProducts'
@@ -16,7 +17,7 @@ export default function FetchProducts() {
   useEffect(()=>
     {
       let url = "https://dummyjson.com/products"
-      if(category!="all")
+      if(category!=="all") //changed != TO !==
       {
         url = `https://dummyjson.com/products/category/${category}`
       }
